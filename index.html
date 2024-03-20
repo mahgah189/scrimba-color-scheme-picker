@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+    <header class="header">
+        <input type="color" class="color-picker" id="color-picker"/>
+        <select class="color-scheme-picker" id="color-scheme-picker">
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome-dark</option>
+            <option value="monochrome-light">Monochrome-light</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic-complement</option>
+            <option value="triad">Triad</option>
+            <option value="quad">Quad</option>
+        </select>
+        <button class="get-scheme-btn" id="get-scheme-btn">Get color scheme</button>
+        <label class="dark-mode-switch" id="dark-mode-switch">
+            <input class="dark-mode-checked" id="dark-mode-checked" type="checkbox" />
+            <span class="slider-toggle"></span>
+        </label>
+    </header>
+
+    <section>
+        <div class="color-bars" id="color-bars">
+            <div class="color-0 color-bar-formatting" id="color-0" data-color="F55A5A"></div>
+            <div class="color-1 color-bar-formatting" id="color-1" data-color="2B283A"></div>
+            <div class="color-2 color-bar-formatting" id="color-2" data-color="FBF3AB"></div>
+            <div class="color-3 color-bar-formatting" id="color-3" data-color="AAD1B6"></div>
+            <div class="color-4 color-bar-formatting" id="color-4" data-color="A626D3"></div>
+            <p class="color-0-hex hex-text" data-color="F55A5A">#F55A5A</p>
+            <p class="color-1-hex hex-text" data-color="2B283A">#2B283A</p>
+            <p class="color-2-hex hex-text" data-color="FBF3AB">#FBF3AB</p>
+            <p class="color-3-hex hex-text" data-color="AAD1B6">#AAD1B6</p>
+            <p class="color-4-hex hex-text" data-color="A626D3">#A626D3</p>
+        </div>
+    </section>
+</body>
+
+<script src="index.js"></script>
+
+</html>
