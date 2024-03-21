@@ -61,9 +61,10 @@ function mapColorsToBars(colorsArr) {
     };
 
     for (let color of colorsArr) {
-        if (hexText[0].classList.contains('dark-mode-text')) {
+        
+        if (darkModeCheckbox.checked) {
             colorBars.innerHTML += `
-                <p class="color-${colorsArr.indexOf(color)}-hex hex-text dark-mode-text" data-color="${color.hex.clean}">${color.hex.value}</p>
+                <p class="dark-mode-text color-${colorsArr.indexOf(color)}-hex hex-text" data-color="${color.hex.clean}">${color.hex.value}</p>
             `;
         } else {
             colorBars.innerHTML += `
