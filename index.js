@@ -68,6 +68,8 @@ function mapColorsToBars(colorsArr) {
     };
 };
 
+// Hex color text doesn't update when done inside of a for loop for some reason. 
+
 function addDarkModeTextToHex() {
     hexText[0].classList.add('dark-mode-text');
     hexText[1].classList.add('dark-mode-text');
