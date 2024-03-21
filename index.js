@@ -57,14 +57,20 @@ function mapColorsToBars(colorsArr) {
         colorBars.innerHTML += `
             <div class="color-${colorsArr.indexOf(color)} color-bar-formatting" id="color-${colorsArr.indexOf(color)}" data-color="${color.hex.clean}"></div>
         `;
-
         document.getElementById(`color-${colorsArr.indexOf(color)}`).style.backgroundColor = `${color.hex.value}`;
     };
 
     for (let color of colorsArr) {
-        colorBars.innerHTML += `
-            <p class="color-${colorsArr.indexOf(color)}-hex hex-text" data-color="${color.hex.clean}">${color.hex.value}</p>
-        `;
+        if (hexText[0].classList.contains('dark-mode-text')) {
+            colorBars.innerHTML += `
+                <p class="color-${colorsArr.indexOf(color)}-hex hex-text dark-mode-text" data-color="${color.hex.clean}">${color.hex.value}</p>
+            `;
+        } else {
+            colorBars.innerHTML += `
+                <p class="color-${colorsArr.indexOf(color)}-hex hex-text" data-color="${color.hex.clean}">${color.hex.value}</p>
+            `;
+        }
+
     };
 };
 
